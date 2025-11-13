@@ -6,16 +6,16 @@
     <title>Register | Spark 2023</title>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
     <link rel="stylesheet" href="../css/styles.css">
-    <link rel="stylesheet" href="css/responsive.css">
+    <link rel="stylesheet" href="../css/responsive.css">
 </head>
 <body>
 <!-- Header -->
 <header>
     <div class="container">
         <nav class="navbar">
-            <a href="index.html" class="logo">Spark<span>2023</span></a>
+            <a href="../index.html" class="logo">Spark<span>2023</span></a>
             <ul class="nav-links">
-                <li><a href="index.html" class="nav-link">Home</a></li>
+                <li><a href="../index.html" class="nav-link">Home</a></li>
                 <li><a href="about.html" class="nav-link">About</a></li>
                 <li><a href="schedule.html" class="nav-link">Schedule</a></li>
                 <li><a href="speakers.html" class="nav-link">Speakers</a></li>
@@ -36,3 +36,260 @@
         <p>Secure your spot at the most anticipated tech conference of the year</p>
     </div>
 </section>
+
+<!-- Registration Content -->
+<section class="page-content registration">
+    <div class="container">
+        <div class="registration-container">
+            <div style="text-align: center; margin-bottom: 30px;">
+                <h2>Join Us November 15-16, 2023</h2>
+                <p>Complete the form below to register for Spark 2023. Early bird pricing available until October 15th.</p>
+            </div>
+
+            <form id="registration-form">
+                <h3 style="margin-bottom: 20px; color: var(--primary);">Personal Information</h3>
+
+                <div class="form-row">
+                    <div class="form-group">
+                        <label for="first-name">First Name *</label>
+                        <input type="text" id="first-name" name="first-name" required>
+                    </div>
+                    <div class="form-group">
+                        <label for="last-name">Last Name *</label>
+                        <input type="text" id="last-name" name="last-name" required>
+                    </div>
+                </div>
+
+                <div class="form-group">
+                    <label for="email">Email Address *</label>
+                    <input type="email" id="email" name="email" required>
+                </div>
+
+                <div class="form-group">
+                    <label for="phone">Phone Number</label>
+                    <input type="tel" id="phone" name="phone">
+                </div>
+
+                <div class="form-group">
+                    <label for="company">Company / Organization</label>
+                    <input type="text" id="company" name="company">
+                </div>
+
+                <div class="form-group">
+                    <label for="job-title">Job Title</label>
+                    <input type="text" id="job-title" name="job-title">
+                </div>
+
+                <h3 style="margin: 30px 0 20px; color: var(--primary);">Ticket Selection</h3>
+
+                <div class="form-group">
+                    <label for="ticket-type">Ticket Type *</label>
+                    <select id="ticket-type" name="ticket-type" required onchange="updateTicketPrice()">
+                        <option value="">Select your ticket</option>
+                        <option value="general">General Admission - $199</option>
+                        <option value="student">Student - $99</option>
+                        <option value="vip">VIP Pass - $349</option>
+                        <option value="group">Group (5+ people) - $149 each</option>
+                    </select>
+                </div>
+
+                <div id="group-size" class="form-group" style="display: none;">
+                    <label for="attendees">Number of Attendees</label>
+                    <input type="number" id="attendees" name="attendees" min="5" max="20" value="5">
+                </div>
+
+                <div id="total-price" style="background: #f8f9fa; padding: 15px; border-radius: 5px; margin-bottom: 20px; text-align: center; display: none;">
+                    <h4>Total: <span id="price-amount">$0</span></h4>
+                </div>
+
+                <h3 style="margin: 30px 0 20px; color: var(--primary);">Conference Interests</h3>
+
+                <div class="form-group">
+                    <label>Which topics interest you most? (Select all that apply)</label>
+                    <div class="checkbox-group">
+                        <input type="checkbox" id="ai" name="interests" value="ai">
+                        <label for="ai">Artificial Intelligence & Machine Learning</label>
+                    </div>
+                    <div class="checkbox-group">
+                        <input type="checkbox" id="web" name="interests" value="web">
+                        <label for="web">Web Development</label>
+                    </div>
+                    <div class="checkbox-group">
+                        <input type="checkbox" id="ux" name="interests" value="ux">
+                        <label for="ux">UX/UI Design</label>
+                    </div>
+                    <div class="checkbox-group">
+                        <input type="checkbox" id="data" name="interests" value="data">
+                        <label for="data">Data Science</label>
+                    </div>
+                    <div class="checkbox-group">
+                        <input type="checkbox" id="cloud" name="interests" value="cloud">
+                        <label for="cloud">Cloud Computing</label>
+                    </div>
+                    <div class="checkbox-group">
+                        <input type="checkbox" id="mobile" name="interests" value="mobile">
+                        <label for="mobile">Mobile Development</label>
+                    </div>
+                    <div class="checkbox-group">
+                        <input type="checkbox" id="startup" name="interests" value="startup">
+                        <label for="startup">Startups & Entrepreneurship</label>
+                    </div>
+                    <div class="checkbox-group">
+                        <input type="checkbox" id="security" name="interests" value="security">
+                        <label for="security">Cybersecurity</label>
+                    </div>
+                </div>
+
+                <div class="form-group">
+                    <label for="dietary">Dietary Requirements</label>
+                    <select id="dietary" name="dietary">
+                        <option value="">No special requirements</option>
+                        <option value="vegetarian">Vegetarian</option>
+                        <option value="vegan">Vegan</option>
+                        <option value="gluten-free">Gluten-Free</option>
+                        <option value="other">Other (please specify in comments)</option>
+                    </select>
+                </div>
+
+                <div class="form-group">
+                    <label for="comments">Additional Comments or Questions</label>
+                    <textarea id="comments" name="comments" rows="4" style="width: 100%; padding: 12px 15px; border: 1px solid #ddd; border-radius: 5px; font-family: inherit;"></textarea>
+                </div>
+
+                <div class="checkbox-group">
+                    <input type="checkbox" id="newsletter" name="newsletter" checked>
+                    <label for="newsletter">Subscribe to our newsletter for conference updates and future events</label>
+                </div>
+
+                <div class="checkbox-group">
+                    <input type="checkbox" id="terms" name="terms" required>
+                    <label for="terms">I agree to the <a href="#">terms and conditions</a> and <a href="#">privacy policy</a> *</label>
+                </div>
+
+                <button type="submit" class="btn submit-btn">Complete Registration</button>
+
+                <p style="text-align: center; margin-top: 20px; font-size: 0.9rem; color: var(--gray);">
+                    Need help with registration? Contact us at <a href="mailto:hello@spark2023.com">hello@spark2023.com</a>
+                </p>
+            </form>
+        </div>
+    </div>
+</section>
+
+<!-- Ticket Options -->
+<section class="page-content" style="background: linear-gradient(135deg, rgba(108, 99, 255, 0.05) 0%, rgba(255, 101, 132, 0.05) 100%);">
+    <div class="container">
+        <h2>Ticket Options</h2>
+        <div class="about-stats">
+            <div class="stat-item">
+                <h3>General Admission</h3>
+                <div class="stat-number">$199</div>
+                <p>Access to all conference sessions, workshops, and networking events. Includes lunch and refreshments.</p>
+            </div>
+            <div class="stat-item">
+                <h3>Student</h3>
+                <div class="stat-number">$99</div>
+                <p>Discounted rate for students with valid ID. Full access to all conference activities.</p>
+            </div>
+            <div class="stat-item">
+                <h3>VIP Pass</h3>
+                <div class="stat-number">$349</div>
+                <p>Premium experience with reserved seating, VIP lounge access, and exclusive networking dinner.</p>
+            </div>
+            <div class="stat-item">
+                <h3>Group</h3>
+                <div class="stat-number">$149</div>
+                <p>Special pricing for groups of 5 or more. Perfect for teams and organizations.</p>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- Footer -->
+<footer>
+    <div class="container">
+        <div class="footer-content">
+            <div class="footer-column">
+                <h3>Spark 2023</h3>
+                <p>Igniting creativity and innovation in the tech community through meaningful connections and knowledge sharing.</p>
+                <div class="social-links">
+                    <a href="#"><i class="fab fa-twitter"></i></a>
+                    <a href="#"><i class="fab fa-linkedin-in"></i></a>
+                    <a href="#"><i class="fab fa-instagram"></i></a>
+                    <a href="#"><i class="fab fa-facebook-f"></i></a>
+                </div>
+            </div>
+            <div class="footer-column">
+                <h3>Quick Links</h3>
+                <ul class="footer-links">
+                    <li><a href="../index.html">Home</a></li>
+                    <li><a href="about.html">About</a></li>
+                    <li><a href="schedule.html">Schedule</a></li>
+                    <li><a href="speakers.html">Speakers</a></li>
+                    <li><a href="venue.html">Venue</a></li>
+                    <li><a href="register.html">Register</a></li>
+                </ul>
+            </div>
+            <div class="footer-column">
+                <h3>Contact Info</h3>
+                <ul class="footer-links">
+                    <li><i class="fas fa-envelope"></i> hello@spark2023.com</li>
+                    <li><i class="fas fa-phone"></i> +1 (555) 123-4567</li>
+                    <li><i class="fas fa-map-marker-alt"></i> 123 Innovation Drive, Tech City</li>
+                </ul>
+            </div>
+        </div>
+        <div class="copyright">
+            <p>&copy; 2023 Spark Conference. All rights reserved.</p>
+        </div>
+    </div>
+</footer>
+
+<script>
+    function updateTicketPrice() {
+        const ticketType = document.getElementById('ticket-type').value;
+        const groupSize = document.getElementById('group-size');
+        const totalPrice = document.getElementById('total-price');
+        const priceAmount = document.getElementById('price-amount');
+        const attendees = document.getElementById('attendees');
+
+        let price = 0;
+        let showGroup = false;
+
+        switch(ticketType) {
+            case 'general':
+                price = 199;
+                break;
+            case 'student':
+                price = 99;
+                break;
+            case 'vip':
+                price = 349;
+                break;
+            case 'group':
+                price = 149 * parseInt(attendees.value);
+                showGroup = true;
+                break;
+        }
+
+        if (showGroup) {
+            groupSize.style.display = 'block';
+            totalPrice.style.display = 'block';
+            priceAmount.textContent = '$' + price;
+        } else if (ticketType) {
+            groupSize.style.display = 'none';
+            totalPrice.style.display = 'block';
+            priceAmount.textContent = '$' + price;
+        } else {
+            groupSize.style.display = 'none';
+            totalPrice.style.display = 'none';
+        }
+    }
+
+    // Update group price when attendee count changes
+    document.getElementById('attendees').addEventListener('change', updateTicketPrice);
+</script>
+<script src="../js/main.js"></script>
+<script src="../js/form.js"></script>
+</body>
+</html>
