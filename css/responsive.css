@@ -1,0 +1,120 @@
+/* Responsive Styles */
+@media (max-width: 992px) {
+    h1 {
+        font-size: 2.8rem;
+    }
+
+    h2 {
+        font-size: 2.2rem;
+    }
+
+    .hero-content {
+        max-width: 100%;
+        text-align: center;
+    }
+
+    .hero-image {
+        display: none;
+    }
+
+    .about-content, .venue-content {
+        grid-template-columns: 1fr;
+    }
+
+    .about-text h2, .venue-info h2 {
+        text-align: center;
+    }
+
+    .about-text h2:after, .venue-info h2:after {
+        left: 50%;
+        transform: translateX(-50%);
+    }
+}
+
+@media (max-width: 768px) {
+    .navbar {
+        padding: 15px 0;
+    }
+
+    .nav-links {
+        display: none;
+        position: absolute;
+        top: 70px;
+        left: 0;
+        width: 100%;
+        background: white;
+        flex-direction: column;
+        padding: 20px;
+        box-shadow: 0 10px 20px rgba(0, 0, 0, 0.1);
+        text-align: center;
+    }
+
+    .nav-links.active {
+        display: flex;
+    }
+
+    .mobile-menu-btn {
+        display: block;
+    }
+
+    .hero-btns {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .countdown-container {
+        flex-wrap: wrap;
+        gap: 20px;
+    }
+
+    .countdown-item {
+        width: 45%;
+    }
+
+    .form-row {
+        grid-template-columns: 1fr;
+    }
+
+    .schedule-item {
+        grid-template-columns: 1fr;
+        gap: 15px;
+    }
+
+    .page-hero {
+        height: 50vh;
+    }
+}
+
+@media (max-width: 576px) {
+    h1 {
+        font-size: 2.2rem;
+    }
+
+    h2 {
+        font-size: 1.8rem;
+    }
+
+    section {
+        padding: 60px 0;
+    }
+
+    .countdown-item {
+        width: 100%;
+    }
+
+    .about-stats {
+        grid-template-columns: 1fr;
+    }
+
+    .registration-container {
+        padding: 30px 20px;
+    }
+
+    .page-hero {
+        height: 40vh;
+    }
+
+    .page-content {
+        padding: 60px 0;
+    }
+}
