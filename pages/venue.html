@@ -1,0 +1,251 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Venue | Spark 2023</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link rel="stylesheet" href="../css/styles.css">
+    <link rel="stylesheet" href="css/responsive.css">
+</head>
+<body>
+<!-- Header -->
+<header>
+    <div class="container">
+        <nav class="navbar">
+            <a href="index.html" class="logo">Spark<span>2023</span></a>
+            <ul class="nav-links">
+                <li><a href="index.html" class="nav-link">Home</a></li>
+                <li><a href="about.html" class="nav-link">About</a></li>
+                <li><a href="schedule.html" class="nav-link">Schedule</a></li>
+                <li><a href="speakers.html" class="nav-link">Speakers</a></li>
+                <li><a href="venue.html" class="nav-link active">Venue</a></li>
+                <li><a href="register.html" class="nav-link">Register</a></li>
+            </ul>
+            <button class="mobile-menu-btn">
+                <i class="fas fa-bars"></i>
+            </button>
+        </nav>
+    </div>
+</header>
+
+<!-- Page Hero -->
+<section class="page-hero">
+    <div class="container">
+        <h1>Venue & Location</h1>
+        <p>Modern facilities in the heart of the city</p>
+    </div>
+</section>
+
+<!-- Venue Content -->
+<section class="page-content venue">
+    <div class="container">
+        <div class="venue-content">
+            <div class="venue-info">
+                <h2>Metropolitan Convention Center</h2>
+                <p>Spark 2023 will be held at the stunning Metropolitan Convention Center, located in the heart of the city with easy access to public transportation, hotels, and dining options.</p>
+
+                <div class="venue-details">
+                    <div class="venue-detail">
+                        <i class="fas fa-map-marker-alt"></i>
+                        <div>
+                            <h4>Address</h4>
+                            <p>123 Innovation Drive, Tech City, TC 10101</p>
+                        </div>
+                    </div>
+                    <div class="venue-detail">
+                        <i class="fas fa-clock"></i>
+                        <div>
+                            <h4>Event Dates & Times</h4>
+                            <p>November 15-16, 2023<br>9:00 AM - 6:00 PM Daily</p>
+                        </div>
+                    </div>
+                    <div class="venue-detail">
+                        <i class="fas fa-subway"></i>
+                        <div>
+                            <h4>Public Transport</h4>
+                            <p>5-minute walk from Central Station (Red & Blue Lines)<br>
+                                Multiple bus routes stop directly outside</p>
+                        </div>
+                    </div>
+                    <div class="venue-detail">
+                        <i class="fas fa-car"></i>
+                        <div>
+                            <h4>Parking</h4>
+                            <p>Complimentary parking available for all attendees<br>
+                                Electric vehicle charging stations on-site</p>
+                        </div>
+                    </div>
+                    <div class="venue-detail">
+                        <i class="fas fa-hotel"></i>
+                        <div>
+                            <h4>Accommodation</h4>
+                            <p>Special rates at partner hotels within walking distance<br>
+                                <a href="#">View hotel recommendations</a></p>
+                        </div>
+                    </div>
+                    <div class="venue-detail">
+                        <i class="fas fa-utensils"></i>
+                        <div>
+                            <h4>Dining</h4>
+                            <p>On-site cafe and restaurant<br>
+                                Numerous dining options within 5-minute walk</p>
+                        </div>
+                    </div>
+                </div>
+
+                <div style="margin-top: 30px;">
+                    <a href="register.html" class="btn">Register Now</a>
+                    <a href="#directions" class="btn btn-outline">Get Directions</a>
+                </div>
+            </div>
+
+            <div class="map-container">
+                <div class="map-placeholder">
+                    <i class="fas fa-map-marked-alt" style="font-size: 3rem; margin-bottom: 15px;"></i>
+                    <h3>Metropolitan Convention Center</h3>
+                    <p>123 Innovation Drive, Tech City</p>
+                    <div style="margin-top: 20px;">
+                        <button class="btn" onclick="openDirections()">
+                            <i class="fas fa-directions"></i> Open in Maps
+                        </button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- Facilities Section -->
+<section class="page-content" style="background: white;">
+    <div class="container">
+        <h2>Venue Facilities</h2>
+        <div class="about-stats">
+            <div class="stat-item">
+                <i class="fas fa-wifi" style="font-size: 2.5rem; color: var(--primary); margin-bottom: 15px;"></i>
+                <h3>High-Speed WiFi</h3>
+                <p>Complimentary high-speed internet throughout the venue</p>
+            </div>
+            <div class="stat-item">
+                <i class="fas fa-wheelchair" style="font-size: 2.5rem; color: var(--primary); margin-bottom: 15px;"></i>
+                <h3>Accessibility</h3>
+                <p>Fully accessible venue with ramps, elevators, and accessible restrooms</p>
+            </div>
+            <div class="stat-item">
+                <i class="fas fa-utensils" style="font-size: 2.5rem; color: var(--primary); margin-bottom: 15px;"></i>
+                <h3>Catering</h3>
+                <p>Quality food and beverage options including dietary accommodations</p>
+            </div>
+            <div class="stat-item">
+                <i class="fas fa-charging-station" style="font-size: 2.5rem; color: var(--primary); margin-bottom: 15px;"></i>
+                <h3>Power & Charging</h3>
+                <p>Ample power outlets and charging stations in all areas</p>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- Directions Section -->
+<section id="directions" class="page-content" style="background: linear-gradient(135deg, rgba(108, 99, 255, 0.05) 0%, rgba(255, 101, 132, 0.05) 100%);">
+    <div class="container">
+        <h2>Getting Here</h2>
+        <div class="venue-content">
+            <div class="venue-info">
+                <h3>By Public Transportation</h3>
+                <p>The Metropolitan Convention Center is easily accessible via multiple public transportation options:</p>
+                <ul style="list-style: disc; margin-left: 20px; margin-bottom: 20px;">
+                    <li><strong>Subway:</strong> Central Station (Red & Blue Lines) - 5 minute walk</li>
+                    <li><strong>Bus:</strong> Routes 101, 205, 307 stop directly outside</li>
+                    <li><strong>Light Rail:</strong> Tech District Line - Convention Center Station</li>
+                </ul>
+
+                <h3>By Car</h3>
+                <p>From downtown: Take Innovation Drive exit from Highway 101<br>
+                    Parking: Complimentary parking in the underground garage</p>
+
+                <h3>Rideshare</h3>
+                <p>Use drop-off point at Main Entrance on Innovation Drive</p>
+            </div>
+
+            <div class="venue-info">
+                <h3>Nearby Hotels</h3>
+                <p>We've partnered with several hotels to offer special rates for Spark 2023 attendees:</p>
+
+                <div class="venue-details">
+                    <div class="venue-detail">
+                        <i class="fas fa-hotel"></i>
+                        <div>
+                            <h4>Tech City Grand Hotel</h4>
+                            <p>0.3 miles • $$$ • <a href="#">Book Now</a></p>
+                        </div>
+                    </div>
+                    <div class="venue-detail">
+                        <i class="fas fa-hotel"></i>
+                        <div>
+                            <h4>Innovation Suites</h4>
+                            <p>0.5 miles • $$ • <a href="#">Book Now</a></p>
+                        </div>
+                    </div>
+                    <div class="venue-detail">
+                        <i class="fas fa-hotel"></i>
+                        <div>
+                            <h4>Metro Stay Hotel</h4>
+                            <p>0.7 miles • $ • <a href="#">Book Now</a></p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- Footer -->
+<footer>
+    <div class="container">
+        <div class="footer-content">
+            <div class="footer-column">
+                <h3>Spark 2023</h3>
+                <p>Igniting creativity and innovation in the tech community through meaningful connections and knowledge sharing.</p>
+                <div class="social-links">
+                    <a href="#"><i class="fab fa-twitter"></i></a>
+                    <a href="#"><i class="fab fa-linkedin-in"></i></a>
+                    <a href="#"><i class="fab fa-instagram"></i></a>
+                    <a href="#"><i class="fab fa-facebook-f"></i></a>
+                </div>
+            </div>
+            <div class="footer-column">
+                <h3>Quick Links</h3>
+                <ul class="footer-links">
+                    <li><a href="index.html">Home</a></li>
+                    <li><a href="about.html">About</a></li>
+                    <li><a href="schedule.html">Schedule</a></li>
+                    <li><a href="speakers.html">Speakers</a></li>
+                    <li><a href="venue.html">Venue</a></li>
+                    <li><a href="register.html">Register</a></li>
+                </ul>
+            </div>
+            <div class="footer-column">
+                <h3>Contact Info</h3>
+                <ul class="footer-links">
+                    <li><i class="fas fa-envelope"></i> hello@spark2023.com</li>
+                    <li><i class="fas fa-phone"></i> +1 (555) 123-4567</li>
+                    <li><i class="fas fa-map-marker-alt"></i> 123 Innovation Drive, Tech City</li>
+                </ul>
+            </div>
+        </div>
+        <div class="copyright">
+            <p>&copy; 2023 Spark Conference. All rights reserved.</p>
+        </div>
+    </div>
+</footer>
+
+<script>
+    function openDirections() {
+        // In a real implementation, this would open maps with the venue location
+        alert('Opening directions to Metropolitan Convention Center in your preferred maps application.');
+        // window.open('https://maps.google.com/?q=123+Innovation+Drive+Tech+City', '_blank');
+    }
+</script>
+<script src="js/main.js"></script>
+</body>
+</html>
