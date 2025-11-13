@@ -1,6 +1,6 @@
 // Countdown Timer
 function updateCountdown() {
-    const eventDate = new Date('Nov 15, 2023 09:00:00').getTime();
+    const eventDate = new Date('Nov 15, 2025 09:00:00').getTime();
     const now = new Date().getTime();
     const timeLeft = eventDate - now;
 
@@ -23,10 +23,4 @@ function updateCountdown() {
         document.getElementById('minutes').textContent = minutes.toString().padStart(2, '0');
         document.getElementById('seconds').textContent = seconds.toString().padStart(2, '0');
     }
-}
-
-// Initialize countdown if on home page
-if (window.location.pathname.endsWith('index.html') || window.location.pathname.endsWith('/')) {
-    setInterval(updateCountdown, 1000);
-    updateCountdown();
 }

@@ -31,7 +31,7 @@ if (registrationForm) {
         submitBtn.disabled = true;
 
         setTimeout(() => {
-            alert('Thank you for registering! We look forward to seeing you at Spark 2023.');
+            alert('Thank you for registering! We look forward to seeing you at Spark 2025.');
             registrationForm.reset();
             submitBtn.textContent = originalText;
             submitBtn.disabled = false;

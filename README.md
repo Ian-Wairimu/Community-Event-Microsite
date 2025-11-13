@@ -1,6 +1,6 @@
-# Spark 2023 - Community Event Microsite
+# Spark 2025 - Community Event Microsite
 
-A modern, responsive microsite for the Spark 2023 community tech conference.
+A modern, responsive microsite for the Spark 2025 community tech conference.
 
 ## Features
 
